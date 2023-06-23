@@ -1,0 +1,153 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+   }
+    html {
+        box-sizing: border-box;
+    }
+/*--------- MOBILE & TABLET----------*/
+@media (min-width: 50px) and (max-width: 919px) {
+    body { 
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-image: url(./img/pacific.jpg);
+        
+        width: 100%;
+        height: 100%;
+    }
+    main {
+        
+      
+        
+    }
+
+    .inicio-sesion {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+        margin: 20px;
+        padding: 30px;
+
+        background-color: #FFFFFF;
+        color: #B0D0F5;
+
+        border-radius: 10px;
+       
+    }
+
+
+    .sesion-texto {
+        width: 100%;
+        text-align: start;
+        margin-top: 10px;
+        color: #42549C;
+        font-weight: bolder;
+    }
+
+    #user-texto, #password-texto {
+        width: 100%;
+        background-color: #B0D0F5;
+        margin-top: 10px;
+        padding: 20px;
+        border-radius: 50px;
+        border-style: none;
+        
+
+    }
+
+    #boton-inicio {
+        border-radius: 50px;
+        background-color: #031251;
+        color: #FFFFFF;
+        font-weight: bolder;
+
+        width: 160px;
+        margin-top: 10px;
+        padding: 10px;
+
+    }
+
+
+
+ }
+/* ----------- DESKTOP -----------*/
+@media (min-width: 920px) { 
+
+    body { 
+        
+        display: block;
+        
+
+        background-image: url(./img/pacific.jpg);
+        background-repeat: no-repeat;
+        
+        
+        width: 100%;
+        
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        
+    }
+
+    .inicio-sesion {
+   
+        text-align: center;
+        width: 30%;
+       
+        padding: 30px;
+
+        background-color: #FFFFFF;
+        color: #B0D0F5;
+
+        border-radius: 20px;
+        margin-top: 150px;
+       
+    }
+
+
+    .sesion-texto {
+        width: 100%;
+        text-align: start;
+        margin-top: 10px;
+        color: #42549C;
+        font-weight: bolder;
+    }
+
+    #user-texto, #password-texto {
+        width: 100%;
+        background-color: #B0D0F5;
+        margin-top: 10px;
+        padding: 20px;
+        border-radius: 50px;
+        border-style: none;
+        
+
+    }
+
+    #boton-inicio {
+        border-radius: 50px;
+        background-color: #031251;
+        color: #FFFFFF;
+        font-weight: bolder;
+
+        width: 160px;
+        margin-top: 10px;
+        padding: 10px;
+
+    }
+
+
+}
+
+
+
