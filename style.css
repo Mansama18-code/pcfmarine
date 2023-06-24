@@ -7,9 +7,19 @@
     html {
         box-sizing: border-box;
     }
+    .links { 
+        text-decoration: none;
+        font-weight: bolder;
+        color: #031251;
+    }
+   
+    
 /*--------- MOBILE & TABLET----------*/
 @media (min-width: 50px) and (max-width: 919px) {
-    body { 
+   
+   /*--------- LOGIN --------------*/
+    
+    .fondo { 
         
         display: flex;
         justify-content: center;
@@ -17,14 +27,11 @@
 
         background-image: url(./img/pacific.jpg);
         
+        
         width: 100%;
         height: 100%;
     }
-    main {
-        
-      
-        
-    }
+   
 
     .inicio-sesion {
         justify-content: center;
@@ -38,9 +45,8 @@
         color: #B0D0F5;
 
         border-radius: 10px;
-       
+        margin-top: 150px;
     }
-
 
     .sesion-texto {
         width: 100%;
@@ -74,12 +80,76 @@
     }
 
 
+    /*--------------- MENU -----------------*/
 
+    .menu {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .lista-menu {
+        display: block;
+        background-color: #B0D0F5;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+    .navegador {
+        width: 100%;
+    }
+
+    .perfil {
+        width: 100%;
+    }
+
+
+    .menu2 {
+        display: block;
+      
+        
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+
+        color: #031251;
+
+    }
+
+    .filtro {
+        text-align: center;
+    }
+    
  }
+
+ 
+    /*-------- ESPACIO PRINCIPAL DE TRABAJO --------*/
+
+    .fondo-principal {
+
+        background-color: #031251;
+        width: 100%;
+        height: 900px;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ----------- DESKTOP -----------*/
 @media (min-width: 920px) { 
 
-    body { 
+    /*----- LOGIN -------*/
+    .fondo { 
         
         display: block;
         
@@ -146,6 +216,77 @@
 
     }
 
+
+    /*--------------- MENU - PAGE 2 -----------------*/
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        padding-left: 40px;
+        
+    }
+
+    .lista-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #B0D0F5;
+        width: 100%;
+        height: 100px;
+
+        margin-left: 40px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        
+    }
+    .navegador {
+        width: 100%;
+    }
+
+    .navegador:hover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #cadff6;
+        height: 100px;
+        border-radius: 50px;
+        transition: 80ms;
+
+    }
+
+    .perfil {
+        width: 100%;
+    }
+
+    .menu2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        height: 50px;
+
+        padding-left: 255px;
+
+        color: #031251;
+
+    }
+
+
+     /*-------- ESPACIO PRINCIPAL DE TRABAJO --------*/
+
+     .fondo-principal {
+
+        background-color: #031251;
+
+        height: 800px;
+
+    }
 
 }
 
