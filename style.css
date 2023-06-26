@@ -11,6 +11,7 @@
         text-decoration: none;
         font-weight: bolder;
         color: #031251;
+        cursor: pointer;
     }
    
     
@@ -18,7 +19,11 @@
 @media (min-width: 50px) and (max-width: 919px) {
    
    /*--------- LOGIN --------------*/
-    
+    header {
+
+        text-align: center;
+
+    }
     .fondo { 
         
         display: flex;
@@ -88,16 +93,22 @@
         width: 100%;
     }
 
+    .listado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
     .lista-menu {
         display: block;
+        
         background-color: #B0D0F5;
         width: 100%;
         height: 100%;
         padding: 20px;
     }
-    .navegador {
-        width: 100%;
-    }
+   
 
     .perfil {
         width: 100%;
@@ -119,6 +130,64 @@
     .filtro {
         text-align: center;
     }
+
+    /*----- HAMBURGER MENU ------*/
+
+    /* Style the navigation menu */
+    #topnav {
+       
+        position: relative;
+    }
+    
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    #topnav #myLinks {
+        display: none;
+        flex-direction: column-reverse;
+        
+    }
+
+    #topnav #myLinks2 {
+        display: none;
+        
+    }
+    
+    /* Style navigation menu links */
+    #topnav a {
+        color: #031251;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    
+    /* Style the hamburger menu */
+    #topnav a.icon {
+        background: #B0D0F5;
+        display: flex;
+        justify-content: center;
+        
+        /*
+        margin-left: 200px;
+        margin-right: 200px;
+        position: absolute;
+        right: 0;
+        top: 0;
+       */
+    }
+    
+    /* Add a grey background color on mouse-over */
+    #topnav a:hover {
+      
+        color: #031251;
+    }
+    
+    /* Style the active link (or home/logo) */
+    .active {
+        color: #031251;
+    }
+
+   
+   
     
  }
 
@@ -127,28 +196,46 @@
 
     .fondo-principal {
 
+        display: block;
         background-color: #031251;
         width: 100%;
-        height: 900px;
+        height: 1200px;
+        padding: 20px;
+
+    }
+
+    .fondo-travel {
+
+        
+        border-radius: 30px;
+        background-color: #FFFFFF;
+        width: 100%;
+        height: 600px;
+        padding: 30px;
+
 
     }
 
 
+/*
 
+--- --- ---       ---\\        //---
+--- --- ---  \    --- \\      // ---
+---         \ \   ---  \\    //  ---
+---         | |   ---   \\  //   ---
+--- --- -- / /    ---    \\//    ---
+--- --- ---       ---            ---
+---               ---            ---
+---               ---            ---
+---               ---            ---
 
-
-
-
-
-
-
-
-
+*/
 
 /* ----------- DESKTOP -----------*/
 @media (min-width: 920px) { 
 
     /*----- LOGIN -------*/
+  
     .fondo { 
         
         display: block;
@@ -218,7 +305,24 @@
 
 
     /*--------------- MENU - PAGE 2 -----------------*/
+    #topnav {
+       
+        position: relative;
+    }
+    
+    #topnav #myLinks2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 30px;
+        padding-left: 80px;
+        padding-right: 80px;
+        
 
+    }
+
+   
     .menu {
         display: flex;
         justify-content: space-between;
@@ -231,6 +335,20 @@
     }
 
     .lista-menu {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #B0D0F5;
+        width: 100%;
+        height: 100px;
+
+        margin-left: 40px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        
+    }
+
+    .lista-menu2 {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -243,6 +361,8 @@
         border-bottom-left-radius: 50px;
         
     }
+
+
     .navegador {
         width: 100%;
     }
@@ -277,7 +397,20 @@
 
     }
 
+    .icon {
+        display: none;
+    }
 
+
+    #profile-user {
+
+
+        margin-left: 200px;
+
+
+    }
+
+    
      /*-------- ESPACIO PRINCIPAL DE TRABAJO --------*/
 
      .fondo-principal {
