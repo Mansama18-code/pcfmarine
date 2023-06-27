@@ -28,7 +28,7 @@
                         <a class="links" href="#"> COMPLETED TRIPS </a>
                         <a class="links" href="#"> HOUR LOG </a>
                         <a class="links" href="#"> INVOICE LOG </a>
-                        <a class="links" href="#"> MI PERFIL </a>
+                        <a class="links" href="#"> YM </a>
                     </div>
                     
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -43,7 +43,7 @@
                         <a class="links" href="#"> COMPLETED TRIPS </a>
                         <a class="links" href="#"> HOUR LOG </a>
                         <a class="links" href="#"> INVOICE LOG </a>
-                        <a class="links" id="profile-user" href="#"> MI PERFIL </a>
+                        <a class="links" id="profile-user" href="#"> YM </a>
                     </div>
                     
                 </div>
@@ -54,13 +54,39 @@
             </div>    
         </header>
 
+        <!---  Dynamic Area of Travel Tickets  --->
         <main class="fondo-principal">
-            
-            <div class="fondo-travel">
-                <div class="ticket-travel">
-                    <p>HOLAAA</p>
+            <!-- This part is created whe we generate a Trip with the form, the form's data stores in the-->
+            <a href="#" class="ticket-link">
+                <div class="fondo-travel">
+                
+                    <div class="ticket-travel">
+                        
+                            <div class="light">
+                                <div class="status-light"> </div>
+                                <p> Traveling...</p>
+                            </div>
+                            <p id="company">
+                                <p>COMPANY: </p>
+                                <p>SOPISCO</p>
+                            </p>
+                            <p id="hours">
+                                <p>DEPARTURE: </p>
+                                <p>08:00hs</p>
+                            </p>
+                            
+                            <p id="vessel">
+                                <p>VESSEL: </p>
+                                <p>KANALA</p>
+                            </p>
+                            <p id="reference-number">
+                                <p>REFERENCE#: </p>
+                                <p>123456</p>
+                            </p>
+                    </div>
+                
                 </div>
-            </div>
+            </a>
 
         </main>
         <footer>

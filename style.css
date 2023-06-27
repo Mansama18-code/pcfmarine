@@ -14,6 +14,7 @@
         cursor: pointer;
     }
    
+   
     
 /*--------- MOBILE & TABLET----------*/
 @media (min-width: 50px) and (max-width: 919px) {
@@ -204,30 +205,79 @@
 
     }
 
+    .ticket-link {
+
+        cursor: pointer;
+        text-decoration: none;
+
+    }
+
     .fondo-travel {
 
-        
-        border-radius: 30px;
-        background-color: #FFFFFF;
+        display: block;
+        border-radius: 20px;
+        background-color: #d9e8f9;
         width: 100%;
-        height: 600px;
+       
         padding: 30px;
+        
 
 
+    }
+
+    .ticket-travel {
+        
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .light {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+
+    }
+    
+    .status-light {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        background-color: green;
+
+    }
+
+    .information {
+        display: block;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        color: #031251;
+        
+    }
+
+    #hours, #company, #vessel, #reference-number {
+
+        font-size:  2em;
     }
 
 
 /*
 
---- --- ---       ---\\        //---
---- --- ---  \    --- \\      // ---
----         \ \   ---  \\    //  ---
----         | |   ---   \\  //   ---
---- --- -- / /    ---    \\//    ---
---- --- ---       ---            ---
----               ---            ---
----               ---            ---
----               ---            ---
+--- --- ---       ---\\\        ///---
+--- --- ---\\\    --- \\\      /// ---
+---         \\\   ---  \\\    ///  ---
+---         |||   ---   \\\  ///   ---
+--- --- -- ///    ---    \\\///    ---
+--- --- ---       ---              ---
+---               ---              ---
+---               ---              ---
+---               ---              ---
 
 */
 
@@ -391,9 +441,11 @@
         width: 100%;
         height: 50px;
 
-        padding-left: 255px;
+        padding-left: 50px;
 
         color: #031251;
+
+        box-shadow: 0px 4px 4px 0px rgba(78, 78, 78, 0.5);
 
     }
 
@@ -404,8 +456,12 @@
 
     #profile-user {
 
-
+        background-color: #FFFFFF;
         margin-left: 200px;
+        padding: 20px;
+        border-radius: 100px;
+        border-style: solid 5px;
+        border-color: #031251;
 
 
     }
@@ -416,9 +472,91 @@
      .fondo-principal {
 
         background-color: #031251;
-
+        padding: 0px;
         height: 800px;
+        
 
+    }
+
+    .ticket-link {
+
+        cursor: pointer;
+
+    }
+
+    .fondo-travel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0px;
+        background-color: #ffffff;
+        width: 100%;
+        height: 130px;
+        margin-top: 5px;
+        padding: 20px;
+        padding-left: 200px ;
+        padding-right: 200px ;
+
+        box-shadow: 0px 4px 4px 0px rgba(78, 78, 78, 0.5);
+
+    }
+
+    
+
+    .ticket-travel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+     
+
+    }
+
+    .light {
+       
+        width: 20%;
+        
+
+    }
+    
+    .status-light {
+        position: relative;
+        top: -10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        margin-right: 10px;
+        background-color: green;
+
+    }
+
+    .information {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        height: 30px;
+        margin-left: 10px;
+        
+
+    }
+
+    #hours, #company, #vessel, #reference-number {
+        display: flex;
+        justify-content: space-between;
+        font-size:  1.5em;
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    #hours p, #company p, #vessel, #reference-number {
+        display: flex;
+        justify-content: space-between;
+        font-size:  1.5em;
+        padding-left: 30px;
+        width: 100%;
     }
 
 }
