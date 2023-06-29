@@ -167,13 +167,7 @@
         display: flex;
         justify-content: center;
         
-        /*
-        margin-left: 200px;
-        margin-right: 200px;
-        position: absolute;
-        right: 0;
-        top: 0;
-       */
+    
     }
     
     /* Add a grey background color on mouse-over */
@@ -200,70 +194,71 @@
         display: block;
         background-color: #031251;
         width: 100%;
-        height: 1200px;
         padding: 20px;
 
     }
 
-    .ticket-link {
-
-        cursor: pointer;
-        text-decoration: none;
-
-    }
-
-    .fondo-travel {
-
-        display: block;
-        border-radius: 20px;
-        background-color: #d9e8f9;
-        width: 100%;
-       
-        padding: 30px;
-        
-
-
-    }
 
     .ticket-travel {
         
         display: flex;
-        width: 100%;
-        justify-content: center;
         align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        width: 100%;
+        text-decoration: none;
+       
+        border-radius: 20px;
+        background-color: #d9e8f9;
+
+        padding: 30px;
+        margin-top: 10px;
+        
+        color: #031251;
+        
 
 
     }
 
     .light {
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
+
         width: 100%;
+        font-size:  1.2em;
         
+        margin-bottom: 25px;
 
     }
     
     .status-light {
+    
         width: 40px;
         height: 40px;
         border-radius: 50px;
+        margin-right: 20px;
         background-color: green;
 
     }
 
-    .information {
-        display: block;
-        padding: 20px;
-        width: 100%;
-        height: 100%;
-        color: #031251;
-        
-    }
+ 
 
     #hours, #company, #vessel, #reference-number {
 
-        font-size:  2em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        font-size:  1.2em;
+
+    }
+
+    .hours div, .company div, .vessel div, .reference-number div {
+       
+        font-size:  1.2em;
+
     }
 
 
@@ -470,34 +465,15 @@
      /*-------- ESPACIO PRINCIPAL DE TRABAJO --------*/
 
      .fondo-principal {
-
+        
         background-color: #031251;
         padding: 0px;
-        height: 800px;
-        
-
-    }
-
-    .ticket-link {
-
-        cursor: pointer;
-
-    }
-
-    .fondo-travel {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 0px;
-        background-color: #ffffff;
         width: 100%;
-        height: 130px;
-        margin-top: 5px;
-        padding: 20px;
-        padding-left: 200px ;
-        padding-right: 200px ;
+        height: 300px;
 
-        box-shadow: 0px 4px 4px 0px rgba(78, 78, 78, 0.5);
+        padding-top: 10px;
+  
+        
 
     }
 
@@ -507,55 +483,52 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: nowrap;
+        
         width: 100%;
      
+        border-radius: 0px;
+        background-color: #ffffff;
+
+        margin-top: 2px;
+        padding: 20px;
+        
 
     }
 
     .light {
-       
-        width: 20%;
+        
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 0px;
         
 
     }
     
     .status-light {
-        position: relative;
-        top: -10px;
-        width: 30px;
-        height: 30px;
+      
+        width: 40px;
+        height: 40px;
         border-radius: 50px;
-        margin-right: 10px;
+        margin-right: 20px;
         background-color: green;
 
     }
 
-    .information {
-
+    .hours, .company, .vessel, .reference-number {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        font-size:  1em;
+        padding-left: 10px;
+        padding-top: 0px;
         width: 100%;
-        height: 30px;
-        margin-left: 10px;
+    }
+
+    .hours div, .company div, .vessel div, .reference-number div {
         
-
-    }
-
-    #hours, #company, #vessel, #reference-number {
-        display: flex;
-        justify-content: space-between;
-        font-size:  1.5em;
-        padding-left: 30px;
-        width: 100%;
-    }
-
-    #hours p, #company p, #vessel, #reference-number {
-        display: flex;
-        justify-content: space-between;
-        font-size:  1.5em;
-        padding-left: 30px;
+        font-size:  1em;
+       
         width: 100%;
     }
 
