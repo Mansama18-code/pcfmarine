@@ -6,261 +6,29 @@
    }
     html {
         box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+
+    }
+    body {
+        height: 100%;
+        width: 100%;
     }
     .links { 
         text-decoration: none;
         font-weight: bolder;
-        color: #031251;
+        color: #FFFFFF;
         cursor: pointer;
     }
-   
-   
-    
-/*--------- MOBILE & TABLET----------*/
-@media (min-width: 50px) and (max-width: 919px) {
-   
-   /*--------- LOGIN --------------*/
-    header {
-
-        text-align: center;
-
-    }
-    .fondo { 
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        background-image: url(./img/pacific.jpg);
-        
-        
-        width: 100%;
-        height: 100%;
-    }
-   
-
-    .inicio-sesion {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 90%;
-        margin: 20px;
-        padding: 30px;
-
-        background-color: #FFFFFF;
-        color: #B0D0F5;
-
-        border-radius: 10px;
-        margin-top: 150px;
-    }
-
-    .sesion-texto {
-        width: 100%;
-        text-align: start;
-        margin-top: 10px;
-        color: #42549C;
-        font-weight: bolder;
-    }
-
-    #user-texto, #password-texto {
-        width: 100%;
-        background-color: #B0D0F5;
-        margin-top: 10px;
-        padding: 20px;
-        border-radius: 50px;
-        border-style: none;
-        
-
-    }
-
-    #boton-inicio {
-        border-radius: 50px;
-        background-color: #031251;
-        color: #FFFFFF;
-        font-weight: bolder;
-
-        width: 160px;
-        margin-top: 10px;
-        padding: 10px;
-
-    }
-
-
-    /*--------------- MENU -----------------*/
-
-    .menu {
-        display: block;
-        text-align: center;
-        width: 100%;
-    }
-
-    .listado {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-
-    .lista-menu {
-        display: block;
-        
-        background-color: #B0D0F5;
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-    }
-   
-
-    .perfil {
-        width: 100%;
-    }
-
-
-    .menu2 {
-        display: block;
-      
-        
-        width: 100%;
-        height: 100%;
-        padding: 10px;
-
-        color: #031251;
-
-    }
-
-    .filtro {
-        text-align: center;
-    }
-
-    /*----- HAMBURGER MENU ------*/
-
-    /* Style the navigation menu */
-    #topnav {
-       
-        position: relative;
-    }
-    
-    /* Hide the links inside the navigation menu (except for logo/home) */
-    #topnav #myLinks {
-        display: none;
-        flex-direction: column-reverse;
-        
-    }
-
-    #topnav #myLinks2 {
-        display: none;
-        
-    }
-    
-    /* Style navigation menu links */
-    #topnav a {
-        color: #031251;
-        padding: 14px 16px;
+    .links-profile {
         text-decoration: none;
-        font-size: 17px;
-        display: block;
-    }
-    
-    /* Style the hamburger menu */
-    #topnav a.icon {
-        background: #B0D0F5;
-        display: flex;
-        justify-content: center;
-        
-    
-    }
-    
-    /* Add a grey background color on mouse-over */
-    #topnav a:hover {
-      
+        font-weight: bolder;
         color: #031251;
-    }
-    
-    /* Style the active link (or home/logo) */
-    .active {
-        color: #031251;
-    }
-
-   
-   
-    
- }
-
- 
-    /*-------- ESPACIO PRINCIPAL DE TRABAJO --------*/
-
-    .fondo-principal {
-
-        display: block;
-        background-color: #031251;
-        width: 100%;
-        padding: 20px;
+        cursor: pointer;
 
     }
 
-
-    .ticket-travel {
-        
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        width: 100%;
-        text-decoration: none;
-       
-        border-radius: 20px;
-        background-color: #d9e8f9;
-
-        padding: 30px;
-        margin-top: 10px;
-        
-        color: #031251;
-        
-
-
-    }
-
-    .light {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-
-        width: 100%;
-        font-size:  1.2em;
-        
-        margin-bottom: 25px;
-
-    }
-    
-    .status-light {
-    
-        width: 40px;
-        height: 40px;
-        border-radius: 50px;
-        margin-right: 20px;
-        background-color: green;
-
-    }
-
- 
-
-    #hours, #company, #vessel, #reference-number {
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-        font-size:  1.2em;
-
-    }
-
-    .hours div, .company div, .vessel div, .reference-number div {
-       
-        font-size:  1.2em;
-
-    }
-
+/* ----------- GENERAL -----------*/
 
 /*
 
@@ -276,9 +44,8 @@
 
 */
 
-/* ----------- DESKTOP -----------*/
-@media (min-width: 920px) { 
-
+/* ----------- DESKTOP ----------- */
+@media (min-width: 921px) { 
     /*----- LOGIN -------*/
   
     .fondo { 
@@ -293,13 +60,7 @@
         width: 100%;
         
     }
-    main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      
-        
-    }
+   
 
     .inicio-sesion {
    
@@ -349,7 +110,23 @@
     }
 
 
-    /*--------------- MENU - PAGE 2 -----------------*/
+    /*--------------- MENU - TRAVEL PAGE -----------------*/
+    .buttonBurger {
+        display: block;
+        text-decoration: none;
+        border: none;
+        background-color: #FFFFFF;
+        cursor: pointer;
+
+    }
+    .buttonBurger:hover {
+        text-decoration: none;
+        border: none;
+        background-color:#B0D0F5;
+        cursor: pointer;
+
+    }
+
     #topnav {
        
         position: relative;
@@ -360,13 +137,29 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 30px;
+        color: #FFFFFF;
         padding-left: 80px;
         padding-right: 80px;
         
 
     }
 
+    .white-bg {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        background-color: #FFFFFF;
+        padding:  20px 10px 20px 5px;
+        width: 15%;
+        height: 80px;
+
+    }
+    .burger-nb {
+        margin:10px;
+
+    }
    
     .menu {
         display: flex;
@@ -374,22 +167,8 @@
         align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
-        padding-left: 40px;
-        
-    }
-
-    .lista-menu {
-        display: none;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #B0D0F5;
-        width: 100%;
-        height: 100px;
-
-        margin-left: 40px;
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
+        height: 80px;
+        background-color: #42549C;   
         
     }
 
@@ -397,7 +176,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #B0D0F5;
+        
         width: 100%;
         height: 100px;
 
@@ -428,32 +207,15 @@
         width: 100%;
     }
 
-    .menu2 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        width: 100%;
-        height: 50px;
-
-        padding-left: 50px;
-
-        color: #031251;
-
-        box-shadow: 0px 4px 4px 0px rgba(78, 78, 78, 0.5);
-
-    }
-
     .icon {
         display: none;
     }
-
 
     #profile-user {
 
         background-color: #FFFFFF;
         margin-left: 200px;
-        padding: 20px;
+        padding: 10px;
         border-radius: 100px;
         border-style: solid 5px;
         border-color: #031251;
@@ -462,77 +224,562 @@
     }
 
     
-     /*-------- ESPACIO PRINCIPAL DE TRABAJO --------*/
+    /*-------- ESPACIO PRINCIPAL DE TRABAJO --------*/
+   
 
-     .fondo-principal {
+    .b-lateral {
+        display: none;
+        background-color: aqua;
+        width: 20%;
+        height: 100%;
+        float: left;
         
-        background-color: #031251;
+    }
+    
+     .fondo-principal {
         padding: 0px;
         width: 100%;
-        height: 300px;
-
-        padding-top: 10px;
-  
-        
-
+        height: 100%;
+        float: left;
+        background-color: #0bba28;
     }
 
-    
-
-    .ticket-travel {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-        
-        width: 100%;
-     
-        border-radius: 0px;
-        background-color: #ffffff;
-
-        margin-top: 2px;
-        padding: 20px;
-        
-
+    .b-formulario {
+        display: none;
+        height: 100%;
+        width: 50%;
+        float: right;
+        background-color: #7c0833;
     }
 
-    .light {
+    /*------- BARRA LATERAL -------*/
+    .dot {
+        height: 25px;
+        width: 25px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
         
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 0px;
-        
-
-    }
-    
-    .status-light {
-      
-        width: 40px;
-        height: 40px;
-        border-radius: 50px;
-        margin-right: 20px;
-        background-color: green;
-
     }
 
-    .hours, .company, .vessel, .reference-number {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size:  1em;
-        padding-left: 10px;
-        padding-top: 0px;
-        width: 100%;
+   .grid-container {
+        
+        height: 100%;
     }
 
-    .hours div, .company div, .vessel div, .reference-number div {
-        
-        font-size:  1em;
-       
-        width: 100%;
+    #boton1 {
+
+        display: none;
     }
 
 }
 
+
+/*
+
+--- --- ---       ---\\\        ///---
+--- --- ---\\\    --- \\\      /// ---
+---         \\\   ---  \\\    ///  ---
+---         |||   ---   \\\  ///   ---
+--- --- -- ///    ---    \\\///    ---
+--- --- ---       ---              ---
+---               ---              ---
+---               ---              ---
+---               ---              ---
+
+*/
+
+/* ----------- TABLET ----------- */
+
+@media (min-width: 480px) and (max-width: 920px ){
+
+ /*----- LOGIN -------*/
+  
+ .fondo { 
+        
+    display: block;
+    
+
+    background-image: url(./img/pacific.jpg);
+    background-repeat: no-repeat;
+    
+    
+    width: 100%;
+    
+}
+
+
+.inicio-sesion {
+
+    text-align: center;
+    width: 30%;
+   
+    padding: 30px;
+
+    background-color: #FFFFFF;
+    color: #B0D0F5;
+
+    border-radius: 20px;
+    margin-top: 150px;
+   
+}
+
+
+.sesion-texto {
+    width: 100%;
+    text-align: start;
+    margin-top: 10px;
+    color: #42549C;
+    font-weight: bolder;
+}
+
+#user-texto, #password-texto {
+    width: 100%;
+    background-color: #B0D0F5;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 50px;
+    border-style: none;
+    
+
+}
+
+#boton-inicio {
+    border-radius: 50px;
+    background-color: #031251;
+    color: #FFFFFF;
+    font-weight: bolder;
+
+    width: 160px;
+    margin-top: 10px;
+    padding: 10px;
+
+}
+
+
+/*--------------- MENU - TRAVEL PAGE -----------------*/
+.buttonBurger {
+    display: block;
+    text-decoration: none;
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+
+}
+.buttonBurger:hover {
+    text-decoration: none;
+    border: none;
+    background-color:#B0D0F5;
+    cursor: pointer;
+
+}
+
+#topnav {
+   
+    position: relative;
+}
+
+#topnav #myLinks2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #FFFFFF;
+    padding-left: 80px;
+    padding-right: 80px;
+    
+
+}
+
+.white-bg {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-color: #FFFFFF;
+    padding:  20px 10px 20px 5px;
+    width: 15%;
+    height: 80px;
+
+}
+.burger-nb {
+    margin:10px;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    background-color: #42549C;   
+    
+}
+
+.lista-menu2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: 100px;
+
+    margin-left: 40px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    
+}
+
+
+.navegador {
+    width: 100%;
+}
+
+.navegador:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #cadff6;
+    height: 100px;
+    border-radius: 50px;
+    transition: 80ms;
+
+}
+
+.perfil {
+    width: 100%;
+}
+
+.icon {
+    display: none;
+}
+
+#profile-user {
+
+    background-color: #FFFFFF;
+    margin-left: 200px;
+    padding: 10px;
+    border-radius: 100px;
+    border-style: solid 5px;
+    border-color: #031251;
+
+
+}
+
+
+/*-------- ESPACIO PRINCIPAL DE TRABAJO --------*/
+
+
+.b-lateral {
+    display: none;
+    background-color: aqua;
+    width: 30%;
+    height: 100%;
+    float: left;
+    
+}
+
+ .fondo-principal {
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    float: left;
+    background-color: #0bba28;
+}
+
+.b-formulario {
+    display: none;
+    height: 100%;
+    width: 50%;
+    float: right;
+    background-color: #7c0833;
+}
+
+/*------- BARRA LATERAL -------*/
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    
+}
+
+.grid-container {
+    
+    height: 100%;
+}
+
+#boton1 {
+
+    display: none;
+}
+
+
+
+
+
+
+}
+
+
+
+/*
+
+--- --- ---       ---\\\        ///---
+--- --- ---\\\    --- \\\      /// ---
+---         \\\   ---  \\\    ///  ---
+---         |||   ---   \\\  ///   ---
+--- --- -- ///    ---    \\\///    ---
+--- --- ---       ---              ---
+---               ---              ---
+---               ---              ---
+---               ---              ---
+
+*/
+
+/* ----------- MOBILE ----------- */
+
+
+
+@media (max-width: 479px ){
+
+    /*----- LOGIN -------*/
+     
+    .fondo { 
+           
+       display: block;
+       
+   
+       background-image: url(./img/pacific.jpg);
+       background-repeat: no-repeat;
+       
+       
+       width: 100%;
+       
+   }
+   
+   
+   .inicio-sesion {
+   
+       text-align: center;
+       width: 30%;
+      
+       padding: 30px;
+   
+       background-color: #FFFFFF;
+       color: #B0D0F5;
+   
+       border-radius: 20px;
+       margin-top: 150px;
+      
+   }
+   
+   
+   .sesion-texto {
+       width: 100%;
+       text-align: start;
+       margin-top: 10px;
+       color: #42549C;
+       font-weight: bolder;
+   }
+   
+   #user-texto, #password-texto {
+       width: 100%;
+       background-color: #B0D0F5;
+       margin-top: 10px;
+       padding: 20px;
+       border-radius: 50px;
+       border-style: none;
+       
+   
+   }
+   
+   #boton-inicio {
+       border-radius: 50px;
+       background-color: #031251;
+       color: #FFFFFF;
+       font-weight: bolder;
+   
+       width: 160px;
+       margin-top: 10px;
+       padding: 10px;
+   
+   }
+   
+   
+   /*--------------- MENU - TRAVEL PAGE -----------------*/
+   .buttonBurger {
+       display: block;
+       text-decoration: none;
+       border: none;
+       background-color: #FFFFFF;
+       cursor: pointer;
+   
+   }
+   .buttonBurger:hover {
+       text-decoration: none;
+       border: none;
+       background-color:#B0D0F5;
+       cursor: pointer;
+   
+   }
+   
+   #topnav {
+      
+       position: relative;
+   }
+   
+   #topnav #myLinks2 {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       width: 100%;
+       color: #FFFFFF;
+       padding-left: 80px;
+       padding-right: 80px;
+       
+   
+   }
+   
+   .white-bg {
+       display: flex;
+       justify-content: flex-start;
+       align-items: center;
+       border-top-right-radius: 100px;
+       border-bottom-right-radius: 100px;
+       background-color: #FFFFFF;
+       padding:  20px 10px 20px 5px;
+       width: 15%;
+       height: 80px;
+   
+   }
+   .burger-nb {
+       margin:10px;
+   
+   }
+   
+   .menu {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       text-align: center;
+       width: 100%;
+       height: 80px;
+       background-color: #42549C;   
+       
+   }
+   
+   .lista-menu2 {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       
+       width: 100%;
+       height: 100px;
+   
+       margin-left: 40px;
+       border-top-left-radius: 50px;
+       border-bottom-left-radius: 50px;
+       
+   }
+   
+   
+   .navegador {
+       width: 100%;
+   }
+   
+   .navegador:hover {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       background-color: #cadff6;
+       height: 100px;
+       border-radius: 50px;
+       transition: 80ms;
+   
+   }
+   
+   .perfil {
+       width: 100%;
+   }
+   
+   .icon {
+       display: none;
+   }
+   
+   #profile-user {
+   
+       background-color: #FFFFFF;
+       margin-left: 200px;
+       padding: 10px;
+       border-radius: 100px;
+       border-style: solid 5px;
+       border-color: #031251;
+   
+   
+   }
+   
+   
+   /*-------- ESPACIO PRINCIPAL DE TRABAJO --------*/
+   
+   
+   .b-lateral {
+       display: none;
+       background-color: aqua;
+       width: 80%;
+       height: 100%;
+       float: left;
+       
+       
+   }
+   
+    .fondo-principal {
+       padding: 0px;
+       width: 100%;
+       height: 100%;
+       float: left;
+       background-color: #0bba28;
+   }
+   
+   .b-formulario {
+       display: none;
+       height: 100%;
+       width: 50%;
+       float: right;
+       background-color: #7c0833;
+   }
+   
+   /*------- BARRA LATERAL -------*/
+   .dot {
+       height: 25px;
+       width: 25px;
+       background-color: #bbb;
+       border-radius: 50%;
+       display: inline-block;
+       
+   }
+   
+   .grid-container {
+       
+       height: 100%;
+   }
+   
+   #boton1 {
+   
+       display: none;
+   }
+   
+   
+   
+   
+   
+   
+   }
 
 
