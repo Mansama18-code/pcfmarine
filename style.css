@@ -310,8 +310,8 @@
 
     .table-description {
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        align-items:center;
+        justify-content: flex-start;
         width: 100%;
         height: 60px;
         background-color: #42549C;
@@ -319,8 +319,8 @@
     }
 
     .diseno-table-description {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
 
 
     }
@@ -328,7 +328,7 @@
     .diseno-cuadro {
         display: inline-flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
         height: 60px;
         margin-top: 3px;
@@ -337,9 +337,20 @@
         background-color: #B0D0F5;
     }
 
+    .diseno-status {
+        border-radius: 100px;
+        border-style: none;
+        background-color: #0b5e77;
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+    }
+
     .diseno-texto {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
         border-style: none;
 
     }

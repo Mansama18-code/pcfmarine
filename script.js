@@ -252,8 +252,8 @@ function addNewTicket(){
 
 //div de contenido.
   const text = document.createElement("div");
-  text.setAttribute("class", "diseno-texto");
-  const node = document.createTextNode("Programado... ");
+  text.setAttribute("class", "diseno-status");
+  const node = document.createTextNode("+");
   text.appendChild(node);
 
   const text2 = document.createElement("div");
