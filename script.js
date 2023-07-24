@@ -20,6 +20,8 @@ function openBurger() {
   }
 */
 
+var reference_number = 1;
+
 function openBurger() {
   var x = document.getElementById("bar-lat");
   var y = document.getElementById("main-bar");
@@ -135,6 +137,7 @@ function openForm() {
   var y = document.getElementById("main-bar");
   var z = document.getElementById("form-bar");
   var b = document.getElementById("boton1");
+  
  
 if (window.innerWidth > 1080){
   if (y.style.width == "80%" && x.style.display == "block" )  {
@@ -159,6 +162,7 @@ if (window.innerWidth > 1080){
       z.style.width = "70%"; 
       y.style.width = "30%";
       b.style.display = "block";
+      
     }
   }
    }
@@ -254,28 +258,47 @@ function addNewTicket(){
 
   const text2 = document.createElement("div");
   text2.setAttribute("class", "diseno-texto");
-  const node2 = document.createTextNode("10/11/2012");
-  text2.appendChild(node2);
+  text2.setAttribute("id", "fechass");
+  
+  //const nodo = document.getElementById("fechass");
+  // nodo.innerHTML = node2;
+
+  const textS = document.createElement("span");
+  textS.innerHTML = document.getElementById("fecha1").value;
+  text2.appendChild(textS);
 
   const text3 = document.createElement("div");
   text3.setAttribute("class", "diseno-texto");
-  const node3 = document.createTextNode("08:00");
-  text3.appendChild(node3);
+  
+  const textS2 = document.createElement("span");
+  textS2.innerHTML = document.getElementById("salida").value;
+  
+  text3.appendChild(textS2);
 
   const text4 = document.createElement("div");
   text4.setAttribute("class", "diseno-texto");
-  const node4 = document.createTextNode("12345");
+  const node4 = document.createTextNode("12346666 ");
   text4.appendChild(node4);
 
   const text5 = document.createElement("div");
   text5.setAttribute("class", "diseno-texto");
-  const node5 = document.createTextNode("SOPISCO");
-  text5.appendChild(node5);
+  
+
+  const textS3 = document.createElement("span");
+  textS3.setAttribute("id", "cliente-list");
+  textS3.innerHTML = document.getElementById("client1").value;
+ 
+  var clienteR = document.getElementById("cliente-rec");
+  clienteR.innerHTML = document.getElementById("client1").value;
+  //const node5 = document.getElementById("client1").value;
+  text5.appendChild(textS3);
 
   const text6 = document.createElement("div");
   text6.setAttribute("class", "diseno-texto");
-  const node6 = document.createTextNode("KANALA");
-  text6.appendChild(node6);
+  const textS4 = document.createElement("span");
+  textS4.innerHTML = document.getElementById("vessel1").value;
+  //const node6 = document.getElementById("vessel1").value;
+  text6.appendChild(textS4);
 
 //button de view.
   const btn = document.createElement("button");
@@ -315,7 +338,7 @@ function addNewTicket(){
   const element = document.getElementById("ticket-receiver");
   element.appendChild(para);
   element.insertBefore(para, para);
-
+  
   //const child = document.getElementById("p1");
   //element.insertBefore(para,child);
 

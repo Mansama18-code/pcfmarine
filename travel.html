@@ -55,7 +55,8 @@
                             <div class="form-diseno wrapper-form">
                                 <label>CLIENT:</label>
                                 <select name="client" id="client1">
-                                    <option value="">SOPISCO</option>
+                                    <option value="SOPISCO">SOPISCO</option>
+                                    <option value="PANAMA">PANAMA</option>
                                 </select>
             
                                 <label>LOCATION:</label>
@@ -68,17 +69,17 @@
                             </div>
                             <div class="form-diseno wrapper-form">
                                 <label>DATE: </label>
-                                <input type="date"> 
+                                <input type="date" name="fecha" id="fecha1" value="dd/MM/yyyy"> 
                                 
                                 <label>VESSEL: </label>
-                                <select name="area" id="area">
-                                    <option value="">KANALA</option>
-                                    <option value="">OASIS 1</option>
-                                    <option value="">OASIS 2</option>
+                                <select name="vessel" id="vessel1">
+                                    <option value="KANALA">KANALA</option>
+                                    <option value="OASIS1">OASIS 1</option>
+                                    <option value="OASIS2">OASIS 2</option>
                                 </select>
     
                                 <label>SERVICE AREA: </label>
-                                <select name="area" id="area">
+                                <select name="service" id="service1">
                                     <option value="">OUTTER ROADS</option>
                                     <option value="">TRANSITO NORTE</option>
                                     <option value="">TRANSITO SUR</option>
@@ -101,58 +102,60 @@
     
                             <div class="form-diseno">
                                 <label>DEPARTURE TIME: </label>
-                                <select name="hora-salida" id="salida">
-                                    <option value="">00:00</option>
-                                    <option value="">01:00</option>
-                                    <option value="">02:00</option>
-                                    <option value="">03:00</option>
-                                    <option value="">04:00</option>
-                                    <option value="">05:00</option>
-                                    <option value="">06:00</option>
-                                    <option value="">07:00</option>
-                                    <option value="">08:00</option>
-                                    <option value="">09:00</option>
-                                    <option value="">10:00</option>
-                                    <option value="">11:00</option>
-                                    <option value="">13:00</option>
-                                    <option value="">14:00</option>
-                                    <option value="">15:00</option>
-                                    <option value="">16:00</option>
-                                    <option value="">17:00</option>
-                                    <option value="">18:00</option>
-                                    <option value="">19:00</option>
-                                    <option value="">20:00</option>
-                                    <option value="">21:00</option>
-                                    <option value="">22:00</option>
-                                    <option value="">23:00</option>
+                                <select name="hora-salida" id="salida" >
+                                    <option value="00:00">00:00</option>
+                                    <option value="01:00">01:00</option>
+                                    <option value="02:00">02:00</option>
+                                    <option value="03:00">03:00</option>
+                                    <option value="04:00">04:00</option>
+                                    <option value="05:00">05:00</option>
+                                    <option value="06:00">06:00</option>
+                                    <option value="07:00">07:00</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="21:00">21:00</option>
+                                    <option value="22:00">22:00</option>
+                                    <option value="23:00">23:00</option>
                                   
                                 </select>
     
                                 <label>ARRIVAL TIME: </label>
                                 <select name="hora-llegada" id="llegada">
-                                    <option value="">00:00</option>
-                                    <option value="">01:00</option>
-                                    <option value="">02:00</option>
-                                    <option value="">03:00</option>
-                                    <option value="">04:00</option>
-                                    <option value="">05:00</option>
-                                    <option value="">06:00</option>
-                                    <option value="">07:00</option>
-                                    <option value="">08:00</option>
-                                    <option value="">09:00</option>
-                                    <option value="">10:00</option>
-                                    <option value="">11:00</option>
-                                    <option value="">13:00</option>
-                                    <option value="">14:00</option>
-                                    <option value="">15:00</option>
-                                    <option value="">16:00</option>
-                                    <option value="">17:00</option>
-                                    <option value="">18:00</option>
-                                    <option value="">19:00</option>
-                                    <option value="">20:00</option>
-                                    <option value="">21:00</option>
-                                    <option value="">22:00</option>
-                                    <option value="">23:00</option>
+                                    <option value="00:00">00:00</option>
+                                    <option value="01:00">01:00</option>
+                                    <option value="02:00">02:00</option>
+                                    <option value="03:00">03:00</option>
+                                    <option value="04:00">04:00</option>
+                                    <option value="05:00">05:00</option>
+                                    <option value="06:00">06:00</option>
+                                    <option value="07:00">07:00</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="21:00">21:00</option>
+                                    <option value="22:00">22:00</option>
+                                    <option value="23:00">23:00</option>
                                     
                                 </select>
     
@@ -311,6 +314,7 @@
                     <form class="form-info">
                         <div class="form-diseno wrapper-form">
                             <label>CLIENT:</label>
+                            <div id="cliente-rec"></div>
                             <label>REFERENCE:</label> 
                             <label>TICKET:</label>
                             <label>LOCATION:</label>
@@ -352,57 +356,59 @@
                         <div class="form-diseno">
                             <label>DEPARTURE TIME: </label>
                             <select name="hora-salida" id="salida">
-                                <option value="">00:00</option>
-                                <option value="">01:00</option>
-                                <option value="">02:00</option>
-                                <option value="">03:00</option>
-                                <option value="">04:00</option>
-                                <option value="">05:00</option>
-                                <option value="">06:00</option>
-                                <option value="">07:00</option>
-                                <option value="">08:00</option>
-                                <option value="">09:00</option>
-                                <option value="">10:00</option>
-                                <option value="">11:00</option>
-                                <option value="">13:00</option>
-                                <option value="">14:00</option>
-                                <option value="">15:00</option>
-                                <option value="">16:00</option>
-                                <option value="">17:00</option>
-                                <option value="">18:00</option>
-                                <option value="">19:00</option>
-                                <option value="">20:00</option>
-                                <option value="">21:00</option>
-                                <option value="">22:00</option>
-                                <option value="">23:00</option>
+                                <option value="00:00">00:00</option>
+                                    <option value="01:00">01:00</option>
+                                    <option value="02:00">02:00</option>
+                                    <option value="03:00">03:00</option>
+                                    <option value="04:00">04:00</option>
+                                    <option value="05:00">05:00</option>
+                                    <option value="06:00">06:00</option>
+                                    <option value="07:00">07:00</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="21:00">21:00</option>
+                                    <option value="22:00">22:00</option>
+                                    <option value="23:00">23:00</option>
                                 
                             </select>
 
                             <label>ARRIVAL TIME: </label>
                             <select name="hora-llegada" id="llegada">
-                                <option value="">00:00</option>
-                                <option value="">01:00</option>
-                                <option value="">02:00</option>
-                                <option value="">03:00</option>
-                                <option value="">04:00</option>
-                                <option value="">05:00</option>
-                                <option value="">06:00</option>
-                                <option value="">07:00</option>
-                                <option value="">08:00</option>
-                                <option value="">09:00</option>
-                                <option value="">10:00</option>
-                                <option value="">11:00</option>
-                                <option value="">13:00</option>
-                                <option value="">14:00</option>
-                                <option value="">15:00</option>
-                                <option value="">16:00</option>
-                                <option value="">17:00</option>
-                                <option value="">18:00</option>
-                                <option value="">19:00</option>
-                                <option value="">20:00</option>
-                                <option value="">21:00</option>
-                                <option value="">22:00</option>
-                                <option value="">23:00</option>
+                                <option value="00:00">00:00</option>
+                                <option value="01:00">01:00</option>
+                                <option value="02:00">02:00</option>
+                                <option value="03:00">03:00</option>
+                                <option value="04:00">04:00</option>
+                                <option value="05:00">05:00</option>
+                                <option value="06:00">06:00</option>
+                                <option value="07:00">07:00</option>
+                                <option value="08:00">08:00</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                                <option value="20:00">20:00</option>
+                                <option value="21:00">21:00</option>
+                                <option value="22:00">22:00</option>
+                                <option value="23:00">23:00</option>
                                 
                             </select>
 
