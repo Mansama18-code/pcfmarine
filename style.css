@@ -15,10 +15,15 @@
         width: 100%;
     }
     .links { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         text-decoration: none;
         font-weight: bolder;
         color: #FFFFFF;
         cursor: pointer;
+        
+       
     }
     .links-profile {
         text-decoration: none;
@@ -127,6 +132,21 @@
 
     }
 
+    .barra-diseno {
+        display: block;
+        text-align: center;
+        border-style: 1px solid;
+        border-color: #031251;
+        border-radius: 50px;
+        
+        width: 100%;
+
+
+    }
+
+
+
+
     #topnav {
        
         position: relative;
@@ -136,12 +156,20 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
         color: #FFFFFF;
-        padding-left: 80px;
-        padding-right: 80px;
+        float: left;
+        width: 100%;
+        margin-left: 40px;
+        margin-right: 20px;
         
 
+    }
+
+    #myLinks {
+        float: right;
+        margin-left: 20px;
+        margin-right: 20px;
+        
     }
 
     .white-bg {
@@ -159,6 +187,23 @@
     .burger-nb {
         margin:10px;
 
+    }
+    .view-nb {
+        margin: 0px;
+        background-color: #B0D0F5;
+
+    }
+    .dots-nb {
+        margin: 0px;
+        background-color: #B0D0F5;
+
+    }
+
+    
+
+    #v-next, #v-complete, #v-hour, #v-invoice, #v-profile, #v-editprofile, #v-setting, #v-logout {
+    
+        display: none;
     }
    
     .menu {
@@ -178,14 +223,14 @@
         align-items: center;
         
         width: 100%;
-        height: 100px;
-
-        margin-left: 40px;
+        height: 80px;
+        
+       /* margin-left: 40px;*/
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
         
     }
-
+/*
 
     .navegador {
         width: 100%;
@@ -201,7 +246,7 @@
         border-radius: 50px;
         transition: 80ms;
 
-    }
+    }*/
 
     .perfil {
         width: 100%;
@@ -214,7 +259,7 @@
     #profile-user {
 
         background-color: #FFFFFF;
-        margin-left: 200px;
+        /*margin-left: 200px;*/
         padding: 10px;
         border-radius: 100px;
         border-style: solid 5px;
@@ -229,19 +274,74 @@
 
     .b-lateral {
         display: none;
-        background-color: aqua;
+        background-color: #FFFFFF;
         width: 20%;
         height: 100%;
         float: left;
-        
+        padding: 20px;
     }
     
      .fondo-principal {
         padding: 0px;
+       
         width: 100%;
         height: 100%;
         float: left;
-        background-color: #0bba28;
+        background-color: #FFFFFF;
+    }
+
+    .boton-cerrar {
+        padding: 5px 10px 5px 10px;
+        margin-top: 20px;
+        margin-left: 20px;
+        border-style: none;
+        border-radius: 100px;
+        background-color: #bbb;
+    }
+
+    .boton-cerrar:hover {
+        padding: 5px 10px 5px 10px;
+        margin-top: 20px;
+        margin-left: 20px;
+        border-style: none;
+        border-radius: 100px;
+        background-color: #cadff6;
+    }
+
+    .table-description {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 60px;
+        background-color: #42549C;
+        color: #FFFFFF;
+    }
+
+    .diseno-table-description {
+        margin-left: 10px;
+        margin-right: 10px;
+
+
+    }
+
+    .diseno-cuadro {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 60px;
+        margin-top: 3px;
+        overflow: hidden;
+        padding: 10px;
+        background-color: #B0D0F5;
+    }
+
+    .diseno-texto {
+        margin-left: 10px;
+        margin-right: 10px;
+        border-style: none;
+
     }
 
     .b-formulario {
@@ -249,7 +349,32 @@
         height: 100%;
         width: 50%;
         float: right;
-        background-color: #7c0833;
+        background-color: #FFFFFF;
+    }
+    .border-div {
+        border-style: solid;
+        border-color: #031251;
+
+    }
+    .other-2 {
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        
+       
+        width: 100%;
+        height: 100%;
+        
+        padding: 50px;
+        z-index: 5;
+    }
+    .other-form {
+        
+        background-color: #FFFFFF;
+        width: 80%;
+        border-radius: 30px;
+        
     }
 
     /*------- BARRA LATERAL -------*/
@@ -267,14 +392,128 @@
         height: 100%;
     }
 
-    #boton1 {
+    
 
+    #boton1 {
         display: none;
+        text-decoration: none;
+        position: relative;
+        left: -20px;
+        border-radius: 100px;
+        border-style: none;
+        color: #031251;
+        font-size: 16pt;
+        font-weight: bold;
+        padding: 5px;
+        margin-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+
     }
 
+    .boton2 {
+        display: block;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        color: #031251;
+        padding: 10px;
+        text-align: center;
+        
+        
+    }
+
+.v-line3 { 
+
+    display: none;
 }
 
+.form-container {
+    color:#031251;
+    font-size: large;
+}
 
+.form-info {
+    padding: 50px;
+}
+
+.form-diseno {
+    margin-bottom: 20px;
+}
+
+.form-diseno2 {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.wrapper-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.checkbox-design {
+
+    margin: 10px;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+   
+    background-color: #B0D0F5;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #B0D0F5;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #96A2D2;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #96A2D2;
+    background-color: #96A2D2;
+    border-top: none;
+    padding: 30px;
+  }
+
+  .tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  .textos {
+    border-radius: 10px;
+    border-style: none;
+
+
+  }
+
+} /* ------ END OF MEDIA QUERY ------*/
 /*
 
 --- --- ---       ---\\\        ///---
@@ -381,12 +620,11 @@
 
 #topnav #myLinks2 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     color: #FFFFFF;
-    padding-left: 80px;
-    padding-right: 80px;
+    
     
 
 }
@@ -406,6 +644,17 @@
 .burger-nb {
     margin:10px;
 
+}
+ .v-hour-main, .v-invoice-main, .v-profile-main {
+    display: none;
+
+}
+#v-next, #v-complete {
+
+    display: none;
+} #v-hour, #v-invoice, #v-profile, #v-editprofile, #v-setting, #v-logout {
+
+    display: block;
 }
 
 .menu {
@@ -461,7 +710,7 @@
 #profile-user {
 
     background-color: #FFFFFF;
-    margin-left: 200px;
+    
     padding: 10px;
     border-radius: 100px;
     border-style: solid 5px;
@@ -476,27 +725,35 @@
 
 .b-lateral {
     display: none;
+    position: absolute;
     background-color: aqua;
-    width: 30%;
+    width: 40%;
     height: 100%;
     float: left;
+    z-index: 2;
     
 }
 
  .fondo-principal {
     padding: 0px;
+    position: absolute;
     width: 100%;
     height: 100%;
     float: left;
-    background-color: #0bba28;
+    background-color: #0b5e77;
+    z-index: 0;
 }
+
+
 
 .b-formulario {
     display: none;
+    position: absolute;
     height: 100%;
     width: 50%;
     float: right;
     background-color: #7c0833;
+    z-index: 1;
 }
 
 /*------- BARRA LATERAL -------*/
@@ -519,6 +776,14 @@
     display: none;
 }
 
+.links-profile2{
+   
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 100px;
+    border-style: solid 5px;
+    border-color: #031251;
+    }
 
 
 
@@ -662,6 +927,16 @@
        margin:10px;
    
    }
+
+   .v-next-main, .v-complete-main, .v-hour-main, .v-invoice-main, .v-profile-main {
+        display: none;
+
+   }
+
+   #v-next, #v-complete, #v-hour, #v-invoice, #v-profile, #v-editprofile, #v-setting, #v-logout {
+
+    display: block;
+    }
    
    .menu {
        display: flex;
@@ -716,7 +991,7 @@
    #profile-user {
    
        background-color: #FFFFFF;
-       margin-left: 200px;
+       
        padding: 10px;
        border-radius: 100px;
        border-style: solid 5px;
@@ -731,28 +1006,34 @@
    
    .b-lateral {
        display: none;
-       background-color: aqua;
+       position: absolute;
+       background-color: rgb(0, 115, 255);
        width: 80%;
        height: 100%;
        float: left;
+       z-index: 2;
        
        
    }
    
     .fondo-principal {
        padding: 0px;
+       position: absolute;
        width: 100%;
        height: 100%;
        float: left;
-       background-color: #0bba28;
+       background-color: #032508;
+       z-index: 0;
    }
    
    .b-formulario {
        display: none;
+       position: absolute;
        height: 100%;
-       width: 50%;
+       width: 100%;
        float: right;
        background-color: #7c0833;
+       z-index: 1;
    }
    
    /*------- BARRA LATERAL -------*/
@@ -776,10 +1057,14 @@
    }
    
    
+   .links-profile2{
    
-   
-   
-   
+   background-color: #FFFFFF;
+   padding: 10px;
+   border-radius: 100px;
+   border-style: solid 5px;
+   border-color: #031251;
+   }
    }
 
 

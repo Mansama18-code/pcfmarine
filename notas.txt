@@ -1,0 +1,487 @@
+/*--------- MOBILE & TABLET----------*/
+@media (min-width: 50px) and (max-width: 479px) {
+   
+   /*--------- LOGIN --------------*/
+    header {
+
+        text-align: center;
+
+    }
+    .fondo { 
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-image: url(./img/pacific.jpg);
+        
+        
+        width: 100%;
+        height: 100%;
+    }
+   
+
+    .inicio-sesion {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+        margin: 20px;
+        padding: 30px;
+
+        background-color: #FFFFFF;
+        color: #B0D0F5;
+
+        border-radius: 10px;
+        margin-top: 150px;
+    }
+
+    .sesion-texto {
+        width: 100%;
+        text-align: start;
+        margin-top: 10px;
+        color: #42549C;
+        font-weight: bolder;
+    }
+
+    #user-texto, #password-texto {
+        width: 100%;
+        background-color: #B0D0F5;
+        margin-top: 10px;
+        padding: 20px;
+        border-radius: 50px;
+        border-style: none;
+        
+
+    }
+
+    #boton-inicio {
+        border-radius: 50px;
+        background-color: #031251;
+        color: #FFFFFF;
+        font-weight: bolder;
+
+        width: 160px;
+        margin-top: 10px;
+        padding: 10px;
+
+    }
+
+
+    /*--------------- MENU -----------------*/
+
+    .menu {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .listado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    
+   
+
+    .perfil {
+        width: 100%;
+    }
+
+
+    .menu2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
+        
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+
+        color: #031251;
+        font-size: 0.7 em;
+        box-shadow: 0px 4px 4px 0px rgba(78, 78, 78, 0.2);
+
+    }
+
+    .filtro {
+        text-align: center;
+    }
+
+    /*----- HAMBURGER MENU ------*/
+
+    /* Style the navigation menu */
+    #topnav {
+       
+        position: relative;
+    }
+    
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    #topnav #myLinks {
+        display: none;
+        flex-direction: column-reverse;
+        background-color: #FFFFFF;
+    }
+
+    #topnav #myLinks2 {
+        display: none;
+        background-color: #FFFFFF;
+        
+    }
+    
+    /* Style navigation menu links */
+    #topnav a {
+        
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    
+    /* Style the hamburger menu */
+    #topnav a.icon {
+        background: #B0D0F5;
+        display: flex;
+        justify-content: center;
+        
+    
+    }
+    
+    /* Add a grey background color on mouse-over */
+    #topnav a:hover {
+      
+        color: #031251;
+    }
+    
+    /* Style the active link (or home/logo) */
+    .active {
+        color: #031251;
+    }
+
+   
+   
+    
+ }
+
+ 
+    /*-------- ESPACIO PRINCIPAL DE TRABAJO --------*/
+
+    .fondo-principal {
+
+        display: block;
+        
+        width: 100%;
+        
+
+    }
+
+
+    .ticket-travel {
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      
+        
+
+        width: 100%;
+        height: 60px;
+        text-decoration: none;
+       
+        
+        background-color:#B0D0F5;
+
+        padding: 20px;
+        
+        
+        
+        color: #031251;
+        
+
+
+    }
+    
+
+   /* .light {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        font-size:  1 em;
+        padding-right: 10px;
+       
+
+    } */
+    
+    .status-light {
+    
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        margin-right: 20px;
+        background-color: green;
+
+    }
+
+ 
+
+    .light, .hours, .company, .vessel, .reference-number {
+
+        
+        padding-left: 9px;
+        padding-right: 9px;
+        font-size:  0.5 em;
+
+    }
+
+    .hours div, .company div, .vessel div, .reference-number div {
+       
+        font-size:  0.5 em;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+
+    ---------
+
+
+/*
+
+--- --- ---       ---\\\        ///---
+--- --- ---\\\    --- \\\      /// ---
+---         \\\   ---  \\\    ///  ---
+---         |||   ---   \\\  ///   ---
+--- --- -- ///    ---    \\\///    ---
+--- --- ---       ---              ---
+---               ---              ---
+---               ---              ---
+---               ---              ---
+
+*/
+
+@media (min-width: 480px) and (max-width: 1080px) { 
+
+
+
+}
+
+--------------
+
+
+
+if (x.style.gridTemplateColumns  == "0% 1fr 1fr")  {
+        
+        x.style.gridTemplateColumns = "20% 0.5fr 1fr";
+      
+    } elseif (x.style.gridTemplateColumns == "20% 0.5fr 1fr") {
+        
+        x.style.gridTemplateColumns = "0% 1fr 1fr";
+      
+    } elsif (x.style.gridTemplateColumns = "20% 1fr 0fr"){
+
+        x.style.gridTemplateColumns = "0% 1fr 0fr";
+
+    }
+
+
+
+
+    function openBurger() {
+  var x = document.getElementById("bar-lat");
+  var y = document.getElementById("main-bar");
+  var z = document.getElementById("form-bar");
+  var b = document.getElementById("boton1");
+ 
+
+  if (x.style.display  == "block" )  {
+      
+    if (z.style.display  == "block") {
+      x.style.display = "none";
+      y.style.width = "30%";
+      z.style.width = "70%";
+      b.style.display = "block";
+    }
+    else {
+      x.style.display = "none";
+      y.style.width = "100%";
+    }
+    
+    
+  
+} else  {
+  if (z.style.display  == "block") {
+    x.style.display = "block";
+    y.style.width = "30%";
+    z.style.width = "50%";
+    b.style.display = "block";
+  }
+  else {
+    x.style.display = "block";
+    y.style.width = "80%";}
+}
+  
+  
+}
+ 
+function openForm() {
+  var x = document.getElementById("bar-lat");
+  var y = document.getElementById("main-bar");
+  var z = document.getElementById("form-bar");
+  var b = document.getElementById("boton1");
+ 
+
+  if (y.style.width == "30%" && z.style.display == "block" )  {
+
+    if (x.style.display == "block") { 
+      y.style.width = "80%";
+      //z.style.display = "none";
+      //b.style.display = "none";
+      
+
+    } else {
+
+      y.style.width = "100%";
+      //z.style.display = "none";
+      //b.style.display = "none";
+
+    }
+      
+    
+  
+  } else {
+      if (x.style.display == "block") {
+        y.style.width = "30%";
+        z.style.display = "block";
+        z.style.width = "50%";
+        b.style.display = "block";
+
+      }
+      
+      else {
+        y.style.width = "30%";
+        z.style.display = "block";
+        z.style.width = "70%";
+        b.style.display = "block";
+    }
+
+    }
+
+
+
+  
+  
+}
+
+function openBurger() {
+  var x = document.getElementById("bar-lat");
+  var y = document.getElementById("main-bar");
+  var z = document.getElementById("form-bar");
+  var b = document.getElementById("boton1");
+ 
+if (window.screen.width > 1080){
+  if (x.style.display  == "block" )  {
+      
+    if (z.style.display  == "block") {
+      x.style.display = "none";
+      y.style.width = "30%";
+      z.style.width = "70%";
+    //  b.style.display = "block";
+    }
+    else {
+      x.style.display = "none";
+      y.style.width = "100%";
+    }
+    
+    
+  
+} else  {
+  if (z.style.display  == "block") {
+    
+    x.style.display = "block";
+    y.style.width = "30%";
+    z.style.width = "50%";
+    //b.style.display = "block";
+  }
+  else {
+    x.style.display = "block";
+    y.style.width = "80%";}
+}
+  
+  
+}
+}
+ 
+function openForm() {
+  var x = document.getElementById("bar-lat");
+  var y = document.getElementById("main-bar");
+  var z = document.getElementById("form-bar");
+  var b = document.getElementById("boton1");
+ 
+
+  if (y.style.width == "80%" && x.style.display == "block" )  {
+
+    z.style.display = "block";
+    z.style.width = "50%";
+    y.style.width = "30%"; 
+    b.style.display = "block";
+      
+    
+  
+  } else {
+
+    if (y.style.width == "30%" && x.style.display == "block" ) {
+        
+      z.style.width = "50%";
+
+    }
+      
+    else {
+      z.style.display = "block";
+      z.style.width = "70%"; 
+      y.style.width = "30%";
+      b.style.display = "block";
+    }
+   }
+
+ 
+    
+
+
+  
+
+  
+}
+
+function cerrarForm(){
+  var x = document.getElementById("bar-lat");
+  var y = document.getElementById("main-bar");
+  var z = document.getElementById("form-bar");
+  var b = document.getElementById("boton1");
+
+  if (z.style.display == "block" && y.style.width == "30%") {
+    
+    if(x.style.display == "block"){
+    z.style.display = "none";
+    y.style.width = "80%";
+    }
+
+    else {
+
+      z.style.display = "none";
+      y.style.width = "100%";
+  
+    }
+
+  }
+
+  
+
+
+
+}
+
