@@ -314,7 +314,7 @@ function addNewTicket(){
 //add content in dom.
   const element = document.getElementById("ticket-receiver");
   element.appendChild(para);
-  element.insertBefore(para, null);
+  element.insertBefore(para, para);
 
   //const child = document.getElementById("p1");
   //element.insertBefore(para,child);
