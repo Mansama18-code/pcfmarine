@@ -1,11 +1,376 @@
 
+$(document).ready(function() {
+  // Global Settings
+  //let edit = false;
+  let d = new Date();  //timestamp
+  let da = d.getDate();//day
+  let mon = d.getMonth()+1;   //month
+  let yr = d.getFullYear();   //year
+  let dn;
+  let thisDay, yesterDay, nextDay;
+  if (mon <10){
+    mon = "0"+mon;
+  }
+  if (da > 0 && da < 10){
+    da = "0"+da;
+
+  }
+  
+  fetchTasks2();
+  obtenerDia();
+  
+  $('#date-time').click(function(){ obtenerDia(); return false; });
+  $('#nuevo-dia').click(function(){ nextDia(); return false; });
+  $('#viejo-dia').click(function(){ diaAtras(); return false; });
 
 
-  if (window.innerWidth > 921){
-    var x = document.getElementById("bar-lat");
+  function obtenerDia () {
+    da = d.getDate();       //day
+    mon = d.getMonth()+1;   //month
+    yr = d.getFullYear();   //year
+    
+    dn = da;
+
+    if (mon <10){
+      mon = "0"+mon;
+    }
+    if (dn > 0 && dn < 10){
+      dn = "0"+dn;
+
+    }
+   
+    thisDay =  yr + "-" + mon + "-" +dn;
+    document.getElementById("date-time").innerHTML= thisDay;
+    console.log("Aquí es día actual...");
+    fetchTasks(thisDay);
+    
+    
+  }
+
+ function diaAtras(){
+
+  da = da - 1;
+
+  if (da > 0 && da < 10){
+    dn = "0"+da;
+
+  }
+  else{ 
+    dn = da;
+  }
+
+  if (dn < 1 ){
+    da = 31;
+    //dn = "0"+da;
+    mon--;
+    
+    if (mon < 1){
+      mon = 12;
+      yr--;
+    }
+    if (mon < 10 && mon > 0 ){
+      mon = "0"+mon;
+
+    }
+    nextDay = yr + "-" + mon + "-" +da ;
+    document.getElementById("date-time").innerHTML= nextDay;
+    console.log("Cambia de Mes");
+    fetchTasks(nextDay);
+
+  } else{
+
+    nextDay =  yr + "-" + mon + "-" +dn ;
+    document.getElementById("date-time").innerHTML= nextDay;
+    console.log("Aquí cambia de dia");
+    fetchTasks(nextDay);
+  }
+    
+ }
+ 
+
+  function nextDia () {
+  
+     
+        da = da + 1;
+
+        if (da > 0 && da < 10){
+          dn = "0"+da;
+      
+        }
+        else{ 
+          dn = da;
+        }
+      
+        if (dn > 31 ){
+          da = 1;
+          dn = "0"+da;
+          mon++;
+
+          if (mon >= 13){
+            mon = 1;
+            yr++;
+          }
+          if (mon < 10 && mon > 0) {
+
+            mon = "0"+mon;
+          }
+          nextDay = yr + "-" + mon + "-" +dn ;
+          document.getElementById("date-time").innerHTML= nextDay;
+          console.log("Cambia de Mes");
+          fetchTasks(nextDay);
+        } else{
+      
+          nextDay =  yr + "-" + mon + "-" +dn ;
+          document.getElementById("date-time").innerHTML= nextDay;
+          console.log("Aquí cambia de dia");
+          fetchTasks(nextDay);
+        }
+      
+
+  }
+  
+ 
+  $('#task-form').submit(e => {
+    e.preventDefault();
+    const postData = {
+      reference: $('#reference1').val(),
+      cliente: $('#client1').val(),
+      location: $('#location1').val(),
+      fecha: $('#fecha1').val(),
+      barquito: $('#barquito').val(),
+      service: $('#service1').val(),
+      rate: $('#rate1').val(),
+      departure: $('#salida').val(),
+      arrival: $('#llegada').val(),
+      agent: $('#agent1').val(),
+      fumigator: $('#fumigator1').val(),
+      launch: $('#launch1').val(),
+      captain: $('#captain1').val(),
+      authorize: $('#authorize1').val(),
+      marine: $('#marine1').val(),
+    };
+    const url = 'registerTrip.php' ;
+    console.log(postData, url);
+    $.post(url, postData, (response) => {
+      console.log(response);
+      $('#task-form').trigger('reset');
+      fetchTasks();
+    });
+  });
+
+function fetchTasks(thisDay) {
+    $.ajax({
+      url: 'getTrips.php',
+      type: 'GET',
+      datatype: JSON,
+      success: function(response) {
+        const tasks = JSON.parse(response);
+        console.log(tasks);
+       
+        
+        //console.log(Object.keys(tasks).length);
+        let template = '';
+        //console.log(tasks);
+        //for(let i =0; i < Object.keys(tasks).length; i++){
+          tasks.forEach(task => {
+            //console.log('Data es:'+ task.reference);
+            if(task.fecha == thisDay){
+                template += `
+                        <tr>
+                          <td style="padding-left: 30px;" class="prueba"> ${task.reference} </td>  
+                          <td style="padding-left: 30px;"> ${task.status}</td>
+                          <td style="padding-left: 30px;"> ${task.fecha} </td>
+                          <td style="padding-left: 30px;"> ${task.departure} </td>
+                          <td style="padding-left: 30px;"> ${task.area} </td>
+                          <td style="padding-left: 30px;"> ${task.cliente} </td>
+                          <td style="padding-left: 30px;"> ${task.vessel} </td>
+                          
+                          <td style="padding-left: 30px;">
+                            <button class="task-delete btn ">
+                            <img src="./img/dots3.svg">
+                            </button>
+                          </td>
+                        </tr>
+                    `
+                      
+              }}); 
+            
+        $('#tripsList').html(template);
+        //openForm();
+        $('td:first-child').each(function() {
+          console.log($(this).text());
+        });
+        
+      }
+    });
+  }
+
+  function fetchTasks2() {
+    $.ajax({
+      url: 'getCompleteTrips.php',
+      type: 'GET',
+      datatype: JSON,
+      success: function(response) {
+        const tasks = JSON.parse(response);
+        console.log(tasks);
+        //console.log(Object.keys(tasks).length);
+        let template = '';
+        //console.log(tasks); onclick="openForm()"
+        //for(let i =0; i < Object.keys(tasks).length; i++){
+          tasks.forEach(task => {
+            
+          template += `
+                  <tr>
+                    <td style="padding-left: 30px;" >${task.reference} </td>  
+                    <td style="padding-left: 30px;"> ${task.status}</td>
+                    <td style="padding-left: 30px;"> ${task.fecha} </td>
+                    <td style="padding-left: 30px;"> ${task.departure} </td>
+                    <td style="padding-left: 30px;"> ${task.area} </td>
+                    <td style="padding-left: 30px;"> ${task.cliente} </td>
+                    <td style="padding-left: 30px;"> ${task.vessel} </td>
+                    <td style="padding-left: 30px;">
+                      <button type="button" class="task-delete btn " id="generarTicket">
+                        <img src="./img/ticket.svg">
+                      </button>
+                    </td>
+                    <td style="padding-left: 30px;">
+                      <button type="button" class="task-delete btn " id="openForma2"  >
+                        <img src="./img/view.svg">
+                      </button>
+                    </td>
+                    <td style="padding-left: 30px;">
+                      <button type="button" class="task-delete btn">
+                        <img src="./img/dots3.svg">
+                      </button>
+                    </td>
+                  </tr>
+               `
+            
+        });
+        
+        $('#finishTrips').html(template);
+
+        
+      }
+    });
+  }
+
+  
+  
+  
+ 
+ function fetchTasks3(numRef) {
+  $.ajax({
+    url: 'getTrips.php',
+    type: 'GET',
+    datatype: JSON,
+    success: function(response) {
+      const tasks = JSON.parse(response);
+      //console.log(tasks.length, numRef);
+      
+        let y = String(numRef);
+        let x;
+        
+        tasks.forEach(task => {
+         
+          console.log('CLIENT: '+task.client,'REFERENCE: '+task.reference, 'REF. CLICK'+ y);
+          x = String(task.reference);
+
+          if(x == y){
+            $('#nom-cliente').val(task.cliente);
+            $('#nom-cliente').text(task.cliente);
+            $('#nom-location').val(task.place);
+            $('#nom-location').text(task.place);
+            $('#nom-fecha').val(task.fecha);
+            $('#nom-barquito').val(task.vessel);
+            $('#nom-area').val(task.area);
+            $('#nom-area').text(task.area);
+            $('#nom-rate').val(task.rate);
+            $('#nom-rate').text(task.rate);
+            $('#nom-departure').val(task.departure);
+            $('#nom-departure').text(task.departure);
+            $('#nom-arrival').val(task.arrival);
+            $('#nom-arrival').text(task.arrival);
+            $('#nom-total-h').val('1');
+            $('#nom-launch').val(task.launch);
+            $('#nom-launch').text(task.launch);
+            $('#nom-captain').val(task.captain);
+            $('#nom-captain').text(task.captain);
+            $('#nom-marine').val(task.marine);
+            $('#nom-marine').text(task.marine);
+            $('#nom-authorize').val(task.autorized);
+            $('#nom-authorize').text(task.autorized);
+            
+            
+          }
+    
+   
+
+
+        });
+
+        /*
+
+      $('td:first-child').each(function() {
+        console.log($(this).text());
+      });*/
+      
+    }
+  });
+}// Fin FetchTask3.
+  
+
+$(document).on('click', '.prueba', function () {
+     
+  let inds = $('.prueba').index(this);
+  let numRef = $('.prueba')[inds].innerText;
+  console.log(inds,numRef);
+  $('#num-ref').text(numRef);
+  fetchTasks3(numRef);
+  openForm();
+
+}); //Fin de Onclick referencia.
+
+$('#task-form2').submit(e => {
+  e.preventDefault();
+  const postData = {
+      reference: $('#num-ref').text(),
+      cliente: $('#nom-client1').val(),
+      location: $('#nom-location').val(),
+      fecha: $('#nom-fecha').val(),
+      barquito: $('#nom-barquito').val(),
+      service: $('#area2').val(),
+      rate: $('#rate2').val(),
+      departure: $('#salida1').val(),
+      arrival: $('#llegada1').val(),
+      agent: $('#nom-agent').val(),
+      fumigator: $('#nom-fumigator').val(),
+      launch: $('#nom-launch1').val(),
+      captain: $('#nom-captain1').val(),
+      authorize: $('#nom-authorize1').val(),
+      marine: $('#nom-marine1').val(),
+  };
+  console.log("JSON CARGADO");
+  const url = 'edit-trip.php';
+  //console.log(postData, url);
+  $.post(url, postData, (response) => {
+    console.log(response);
+    $('#task-form2').trigger('reset');
+    fetchTasks();
+  });
+}); //Fin Editar
+
+ 
+});
+
+
+
+
+    let x = document.getElementById("bar-lat");
     const lateral = document.querySelector(".b-lateral");
 
     function showPopup() {
+      
       if (x.style.display  == "block" )  {
         lateral.classList.remove("open");
         x.style.display = "none";
@@ -22,14 +387,26 @@
     }
   
     
-  } 
+ 
+
 function openForm() {
-
-  document.getElementById("form-bar").style.display = "block";
   
-
-
+  
+  //let elclick = document.getElementsByClassName("prueba2");
+  let elclick2 = document.getElementsByClassName("prueba");
+  
+ /* 
+ for(let i = 0; i < elclick2.length; i++){
+    elclick2[i].addEventListener('click',function (){
+        console.log('el index es:'+i, elclick2[i].textContent);
+        document.getElementById("num-ref").innerHTML = elclick2[i].textContent;
+    } );
+    
+ }*/
+ 
+ document.getElementById("form-bar").style.display = "block";
 }
+
 
 function cerrarForm(){
   
@@ -67,6 +444,7 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
+
 function openFrom2(){
 
   var form = document.getElementById("v-form-2");
@@ -84,105 +462,4 @@ function closeform2(){
 
 }
 
-function addNewTicket(){
-//Primer div que pinta el cuadro.
-  const para = document.createElement("div");
-  para.setAttribute("class", "diseno-cuadro");
-  para.setAttribute("id", "cuadro-ticket");
 
-//div de contenido.
-  const text = document.createElement("div");
-  text.setAttribute("class", "diseno-status");
-  const node = document.createTextNode("+");
-  text.appendChild(node);
-
-  const text2 = document.createElement("div");
-  text2.setAttribute("class", "diseno-texto");
-  text2.setAttribute("id", "fechass");
-  
-  //const nodo = document.getElementById("fechass");
-  // nodo.innerHTML = node2;
-
-  const textS = document.createElement("span");
-  textS.innerHTML = document.getElementById("fecha1").value;
-  text2.appendChild(textS);
-
-  const text3 = document.createElement("div");
-  text3.setAttribute("class", "diseno-texto");
-  
-  const textS2 = document.createElement("span");
-  textS2.innerHTML = document.getElementById("salida").value;
-  
-  text3.appendChild(textS2);
-
-  const text4 = document.createElement("div");
-  text4.setAttribute("class", "diseno-texto");
-  const node4 = document.createTextNode("12346666 ");
-  text4.appendChild(node4);
-
-  const text5 = document.createElement("div");
-  text5.setAttribute("class", "diseno-texto");
-  
-
-  const textS3 = document.createElement("span");
-  textS3.setAttribute("id", "cliente-list");
-  textS3.innerHTML = document.getElementById("client1").value;
- 
-  var clienteR = document.getElementById("cliente-rec");
-  clienteR.innerHTML = document.getElementById("client1").value;
-  //const node5 = document.getElementById("client1").value;
-  text5.appendChild(textS3);
-
-  const text6 = document.createElement("div");
-  text6.setAttribute("class", "diseno-texto");
-  const textS4 = document.createElement("span");
-  textS4.innerHTML = document.getElementById("vessel1").value;
-  //const node6 = document.getElementById("vessel1").value;
-  text6.appendChild(textS4);
-
-//button de view.
-  const btn = document.createElement("button");
-  btn.setAttribute("onclick", "openForm()");
-  btn.setAttribute("class","buttonBurger");
-  btn.setAttribute("class", "diseno-texto");
-  btn.setAttribute("id","button-Burger");
-//icono de button view.
-  const imagen = document.createElement("img");
-  imagen.setAttribute("src", "./img/view.svg");
-  imagen.setAttribute("class","view-nb");
-
-  //button de view.
-  const btn2 = document.createElement("button");
-  btn2.setAttribute("class", "diseno-texto");
-  btn2.setAttribute("id","view-more");
-//icono de button view.
-  const imagen2 = document.createElement("img");
-  imagen2.setAttribute("src", "./img/dots3.svg");
-  imagen2.setAttribute("class","dots-nb");
-
-
-  btn.appendChild(imagen);
-  btn2.appendChild(imagen2);
-
-  para.appendChild(text);
-  para.appendChild(text2);
-  para.appendChild(text3);
-  para.appendChild(text4);
-  para.appendChild(text5);
-  para.appendChild(text6);
-
-  para.appendChild(btn);
-  para.appendChild(btn2);
-  
-//add content in dom.
-  const element = document.getElementById("ticket-receiver");
-  element.appendChild(para);
-  element.insertBefore(para, para);
-  
-  //const child = document.getElementById("p1");
-  //element.insertBefore(para,child);
-
-
-
-
-}

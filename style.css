@@ -131,6 +131,14 @@
         height: 30px;
     }
 
+    .centrar-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        color: #031251;
+    }
+
     /*--------------- MENU - TRAVEL PAGE -----------------*/
     .buttonBurger {
         display: block;
